@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>STU网页作业</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+<head>
+<body>
+	<header class='clearfix'>
+		<div class="container">
+			<img src="image/logo.png" alt="logo">
+		<h1>STU网页作业</h1>
+		<div class="wrap">
+			<input type="search" placeholder="搜索" value='搜索'>
+			<input type="button">
+		</div>
+		<div class="dropdown">
+			<div class="dropleft drop">
+				<p>历史记录</p>		
+				<a href="#">清除</a>		
+			</div>
+			<div class="dropright drop">
+				<p>热门分类</p>
+				<ul class="sort">
+					<li><a href="#">个人博客</a></li>
+					<li><a href="#">电子商务</a></li>
+					<li><a href="#">旅游景点家乡类</a></li>
+					<li><a href="#">人物明星</a></li>
+					<li><a href="#">节日类</a>
+					</li>				
+					<li><a href="#">影视音乐</a></li>
+					<li><a href="#">校园班级</a></li>
+				</ul>
+			</div>
+		</div>
+		<ul class='link'>
+			<li>
+				<a href="#">
+					<i class='grace'>&#xe620;</i>
+				    <i>客服</i>
+				</a>				
+			</li>
+			<li>
+				<a href="#">
+					<i class='grace'>&#xe617;</i>
+				    <i>问题</i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='grace'>&#xe615;</i>
+					<i>淘宝</i>
+				</a>
+			</li>
+		</ul>
+		</div>
+	</header>
+	<nav>
+		<div class="container">
+			<div class='sort'>
+				<a href="#">
+					<i class='grace'>&#xe620;</i>所有分类
+				</a>
+			</div>
+			<div class="list">
+				<ul>
+					<li>
+						<a href="#"><i class='grace'>&#xe620;</i>
+							<h3>特价成品</h3>
+							<p>特价网页作业成品</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class='grace'>&#xe620;</i>
+							<h3>特价成品</h3>
+							<p>特价网页作业成品</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class='grace'>&#xe620;</i>
+							<h3>特价成品</h3>
+							<p>特价网页作业成品</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class='grace'>&#xe620;</i>
+							<h3>特价成品</h3>
+							<p>特价网页作业成品</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul id='navul'>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">特技商品</a></li>
+				<li><a href="#">精品成品</a></li>
+				<li><a href="#">动态网站</a></li>
+				<li><a href="#">网页定制</a></li>
+				<li><a href="#">常见问题</a></li>
+			</ul>
+			<div class="count"><a href="#">限时优惠</a>3rd</div>
+			<div class="dropdown">
+				<a href="#"><img src="#" alt="促销信息"></a>
+				<div>
+					<a href="#">精品成品：精品网页设计作业五折优惠优惠</a>
+					<p>活动截止时间：<i>2017-12-30</i></p>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="banner">
+		<div>
+			<a href='#' class='ban_left'><i class='grace'></i></a>
+			<a href="#" class='ban_right'><i class='grace'></i></a>
+		</div>
+		<ul>
+			<li class='current'></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<section>
+		<div class="container">
+			<div class="introduce">
+				 <div>
+				 	<a href="#"><img src="image/dingzhi.jpg" alt="图片"></a>
+				 </div>
+				 <div>
+				 	<a href="#"><img src="image/jingpin.jpg" alt="图片"></a>
+				 </div>
+				 <div>
+				 	<a href="#"><img src="image/mianfei.jpg" alt="图片"></a>
+				 </div>
+				 <div>
+				 	<a href="#"><img src="image/lunwen.jpg" alt="图片"></a>
+				 </div>
+			</div>
+			<div class="jinpin">
+				<div class="header clearfix">
+					<h3>精品网页</h3>
+					<a href="#">查看更多</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script>
+	<!-- 搜索栏 -->
+	var search=document.getElementsByClassName('wrap')[0].children[0];
+	var dropdown = document.getElementsByClassName('dropdown')[0];
+	search.onclick = function(){
+		dropdown.style.display='block';
+	}
+	dropdown.onmouseover = function(){
+		dropdown.style.display='block';
+	}
+	dropdown.onmouseout = function(){
+		dropdown.style.display='none';
+	}
+	search.onmouseout = function(){
+		dropdown.style.display='none';
+	}
+  
+    <!-- 导航栏背景色 -->
+    var navul = document.getElementById('navul');
+    var navli = navul.children;
+    var lilength = navli.length;
+    for(var i=0;i<lilength;i++){
+		navli[i].onmouseover = function(){
+			for(var j=0;j<lilength;j++){
+				navli[j].children[0].style.backgroundColor = 'transparent'
+			}
+			this.children[0].style.backgroundColor = '#414141';
+		}
+	}
+
+   <!-- nav下面的索引 -->
+   var banner = document.getElementsByClassName('banner')[0];
+   var bannerShow = banner.children[1];
+   var bannerli = bannerShow.children;
+   var timer = null;
+   var count = 1;
+   timer = setInterval(function(){
+	 for(var i=0;i<bannerli.length;i++){
+		bannerli[i].className='';
+	 }    
+	 bannerli[count].className='current';
+	 banner.style.backgroundImage='url(./image/banner'+parseInt(count+1)+'.jpg)';
+	 count++;
+	 count=count%3;
+   },3000)
+
+   banner.onmouseover = function(){
+       clearInterval(timer);
+   }
+   banner.onmouseout = function(){
+	   timer=setInterval(function(){
+	     for(var i=0;i<bannerli.length;i++){
+		    bannerli[i].className='';
+	    }    
+	    bannerli[count].className='current';
+	    banner.style.backgroundImage='url(./image/banner'+parseInt(count+1)+'.jpg)';
+	    count++;
+	    count=count%3;
+   },1000);
+   }
+
+   
+</script>
+</html>

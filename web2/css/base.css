@@ -1,0 +1,64 @@
+/*自己的初始化文件*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{
+font-family: "Microsoft YaHei", "微软雅黑", "SimSun", "宋体";
+  
+}
+/* a */
+
+a{font-size:12px;text-decoration: none;color:#666;
+
+  background:transparent;
+  vertical-align:baseline;
+  /* 动画效果 */
+  -webkit-transition:all 0.2s ease;
+  -moz-transition:all 0.2s ease;
+  transition:all 0.2s ease
+}
+
+[placeholder]:focus::-webkit-input-placeholder{
+	-webkit-transition:opacity 0.5s ease;
+	-moz-transition:opacity 0.5s ease;
+	transition:opacity 0.5s ease;
+	opacity:0
+}
+[placeholder]:focus::-moz-input-placeholder{
+	-webkit-transition:opacity 0.5s ease;
+	-moz-transition:opacity 0.5s ease;
+	transition:opacity 0.5s ease;
+	opacity:0
+}
+a:hover{text-decoration: none;}
+
+table{border-collapse:collapse;border-spacing:0;}
+
+img{border:0;vertical-align: middle;}
+/* 消除图片的src没有或者损坏的情况下的边框 */
+img[src=""]{
+opacity: 0;
+}
+
+li{list-style:none;}
+
+input {
+  border: 0;
+  outline: none; 
+}
+input::-webkit-search-cancel-button {
+  display: none; 
+}
+
+input[type=search]::-ms-clear {
+  display: none; 
+}
+i{
+  font-style: normal;
+}
+
+header, section, footer, aside, nav, article, figure  
+{   
+    display: block;   
+} 
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}

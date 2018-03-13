@@ -1,0 +1,337 @@
+/* reset */
+body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+input{
+	border:0;
+	outline: none;
+}
+i{
+	list-style: normal;
+}
+input::-webkit-search-cancel-button{
+  display: none;
+}
+input[type=search]::-ms-clear{
+  display: none;
+}
+
+.clearfix{
+	clear: both;
+}
+
+$maincolor: #FF9500;
+$secolor: #3D9CCC;
+$headcolor: #303A40;
+$footcolor: #F6F6F6;
+$fontcolor: #999;
+$fontsize: 12px;
+$centwidth: 976px;
+$centheight: 50px;
+$iconicimg: url(../image/icons.png);
+$bgimg: url('../image/bg.jpg');
+
+/* head  start*/
+#head{
+	background-color: $headcolor;
+	height: 50px;
+	.contain{
+		width: $centwidth;
+		height: $centheight;
+		margin:0 auto;	
+		.headright{
+			float: right;
+			font-size: $fontsize;
+			line-height: $centheight;
+			position: relative;
+			a{
+			  color: $fontcolor;
+			  padding: 0 8px;
+			  &:hover{
+			    color: #fff;
+			  }
+			}
+			.line{
+			  display: inline-block;
+			  height: 18px;
+			  width: 0;
+			  border-left: 1px dashed $fontcolor;
+			  vertical-align: middle;
+			  margin: 0 6px;
+			}
+			span{
+			 i{
+			 	display:inline-block;
+				width: 13px;
+				height: 16px;
+				margin-left: 11px;
+				background: $iconicimg no-repeat -291px 0;
+				vertical-align: middle;
+			 }
+			 a{
+			 	padding: 0;
+			 }		 
+			}
+			.together{
+			    float: right;
+			    color: #fff;
+			    &:hover{
+			      .head-drop{
+			       display:block;
+			      }
+			      i{
+				    background-position-x: -275px;
+				  }  
+				  a{
+			        color: #fff;
+			   	  }
+			    }
+			}
+			 .head-drop{
+			    &:before{
+			       position:absolute;
+			       top: -28px;
+			       left: 64px;
+			       content: '';
+			       border: 14px solid transparent;
+			       border-bottom-color: #fff;
+			       width: 0;
+			       height:0;
+			    }
+			    position:absolute;
+		        top: 46px;
+    			right: -142px;
+			 	width: 280px;
+			 	height: 181px;
+			 	border: 1px solid #8A9499;
+			 	background-color: #fff;
+			 	display: none;
+			 	h3{
+			 	  height: 50px;
+                  border-bottom: 1px solid #8A9499;
+                  font-size: 18px;
+				  color: #ccc;
+				  text-align: center;
+				  margin: 0;
+				  padding-left: 14px;
+			 	}
+			 	.drop_bot{
+				 	img{
+				 		margin:20px  24px;
+				 		float: left;
+				 	}
+				 	&>span{
+				 		margin-top: 8px;
+				 		span{
+				 		    display: inline-block;
+						    width: 116px;
+						    height: 33px;
+						    line-height: 33px;
+						    background-color: #3D9CCC;
+						    margin-top: 10px;
+						    border-radius: 6px;
+						    text-align: center;
+						    i{
+						       background-position-x: -275px;
+						       margin: 0;
+						    }
+						    a{
+						     color: #fff;
+						    }
+				 		}
+				 		.ios{
+				 			margin-top: 24px;
+				 		}
+				 		.android{
+
+				 		}
+				 	}			 	
+			 	}
+			 }
+		}
+	}
+}
+/* head  end*/
+
+/*content start*/
+#content{
+	background: $bgimg no-repeat;
+	padding-top: 68px;
+	.contain{
+		width: $centwidth;
+		height: 656px;
+		margin:0 auto;
+		.cont_left{
+			float:left;
+			width: 578px;
+			.search{
+				width: 596px;
+				height: 46px;
+				border: 1px solid $maincolor;
+				margin-bottom: 10px;
+				input[type='search']{
+					padding: 17px 20px 13px 20px;
+					width: 462px;
+					height: 46px;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+					float: left;
+					font-size:16px;
+				}
+				span{
+				  display: inline-block;
+				  width: 134px;
+				  height: 46px;
+				  line-height: 46px;
+				  text-align: center;
+				  background-color: $maincolor;
+				  color: #fff;
+				  cursor: pointer;
+				  &:hover{
+				    background-color: #cc7e10;
+				  }
+				}
+			}
+			.nav{
+			    float: left;
+			    padding-right: 7px;
+				li{
+					width: 92px;
+					height: 66px;
+					color: #fff;
+					line-height: 66px;
+					text-align: center;
+					cursor: pointer;
+                    background: rgba(198, 198, 198, 0.3);
+                    font-size: 16px;
+                    &:hover{
+                     background-color: rgba(132, 132, 132, 0.3);
+                    }
+				}
+			}
+			.show{
+				width: 708px;
+				li{				
+				float: left;
+				 background-color: #FFF;
+					margin: 0 6px 6px 0;
+				}
+				img{
+					display: block;
+					width: 120px;
+					height: 61px;
+				}
+				.sort2{
+				 height: 106px;
+				 width: 162px;
+				}
+				.sort3{
+				 width: 120px;
+				 height: 108px;
+				}
+				.sort4{
+					width: 290px;
+					height: 103px;
+				}
+				.sort5{
+				   height: 103px;
+				   width:202px;
+				}
+			}
+		}
+		.cont_right{
+			float:left;
+			width: 368px;
+			height: 455px;
+			margin-left: 30px;
+   			background-color: #fff;
+			.title{
+			  display: block;
+			  height: 62px;
+			  line-height: 62px;
+			  color: $maincolor;
+			  font-size: 18px;
+			   padding: 0 30px;
+			}
+			input{
+			  display: inline-block;
+			  width: 308px;
+			  height: 46px;
+			  border: 1px solid #CCC;
+			  margin:0  30px 18px 30px;
+			  padding: 0 8px;
+			}
+			input[type='text']{
+				width: 129px;
+			}
+			.yzm{
+				display: inline-block;
+				width: 141px;
+				height: 48px;
+				line-height: 48px;
+				text-align: center;
+			    color: $secolor;
+			    background: #e9f1f5;
+			    border: 1px #e4ecf0 solid;
+			    cursor: pointer;
+			    &:hover{
+			        background: #d5e9f2;;
+			    }
+			}
+			.regist{
+			    display:inline-block;
+			    width: 308px;
+			    height: 46px;
+			    line-height: 46px;
+			    text-align:center;
+			    margin: 0 0 30px 30px;
+			    background-color: $maincolor;
+			    color: #fff;
+			    font-family: 'Microsoft YaHei';
+                font-szie: 20px;
+                border: 1px solid $maincolor;
+                cursor: pointer;
+                &:hover{
+                  background-color: #cc7e10;
+                }
+			}
+			input[type='checkbox']{ 
+				width: 12px;
+				height: 12px;
+				border: 1px solid #ccc;
+				color: $secolor;
+				margin-right: 5px;
+			}
+			i{
+			   color:#666;
+			   font-size:12px;
+			}
+			.contRbot{
+			    text-align: center;
+    			margin-top: 38px;
+    			a{
+    			  color: $secolor;
+    			}
+			}
+		}
+	}
+}
+/*content end*/
+
+/*foot start*/
+#footer{
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+}
+/*foot end*/
