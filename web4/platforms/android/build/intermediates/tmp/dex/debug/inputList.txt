@@ -1,2 +1,0 @@
-C:\PROJECT\video\myApp\platforms\android\build\intermediates\classes\debug
-C:\PROJECT\video\myApp\platforms\android\build\intermediates\pre-dexed\debug\classes-d7425bf9c7f10fb59cb28f40d83aa62e3d79e95e.jar

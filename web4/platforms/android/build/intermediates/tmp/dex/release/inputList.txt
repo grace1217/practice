@@ -1,2 +1,0 @@
-C:\PROJECT\video\myApp\platforms\android\build\intermediates\classes\release
-C:\PROJECT\video\myApp\platforms\android\build\intermediates\pre-dexed\release\classes-8347cc88edc32f19a8fd093e74765b5dd0b3d5d2.jar
